@@ -1,3 +1,13 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""
+## Version history:
+
+2021, May:
+	Author: Tanveer Khan
+"""
+
 import pandas as pd
 import numpy as np
 from numpy import mean
@@ -70,9 +80,9 @@ TIMES = np.zeros([48])
 start_time = time.time()
 for s in range(1,49):
     if s < 10:
-        URL="C:\\Users\\tanveerlaptop\\Desktop\\STEW_EEG_Biometric-main\\STEW Dataset\\sub0"+str(s)+"_hi.txt"
+        URL=".\\STEW Dataset\\sub0"+str(s)+"_hi.txt"
     else:
-        URL="C:\\Users\\tanveerlaptop\\Desktop\\STEW_EEG_Biometric-main\\STEW Dataset\\sub"+str(s)+"_hi.txt"
+        URL=".\\STEW Dataset\\sub"+str(s)+"_hi.txt"
 
     Data = pd.read_csv(URL, sep="  ", header=None)
     Data.columns=Channels
